@@ -27,5 +27,19 @@ jobs:
          ps -ef;
          df -lk;
          cat /etc/passwd;
+  job3:
+    needs: job2
+    name: JOB03
+    runs-on: ubuntu-22.04
+    steps:
+      - name : small step
+        run: sleep 10
+  job4:
+    needs: job1
+    name: JOB04
+    runs-on: ubuntu-22.04
+    steps:
+      - name : small step
+        run: sleep 20   
         
     
