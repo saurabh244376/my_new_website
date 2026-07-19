@@ -1,6 +1,6 @@
 name: my-first-workflow
 # To get trigger 
-on: push
+on: pull_request
 jobs:
   job1:
    name: JOB1
