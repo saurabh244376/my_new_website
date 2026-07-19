@@ -1,6 +1,6 @@
 name: my-first-workflow
 # To get trigger 
-on: pull_request
+on: push
 jobs:
   job1:
    name: JOB1
@@ -10,3 +10,16 @@ jobs:
        run: echo "Hi This is my firest Github workflow"
      - name : checking OS-Release background
        run: cat /etc/os-release 
+  job2:
+    needs: job1
+    name:  JOB02
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking the hostname
+        run: hostname
+      - name: running multiple commands
+        run: 
+         echo "Hi from Saurabh Dubey"
+         cal 
+        
+    
