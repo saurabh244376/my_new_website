@@ -20,6 +20,7 @@ jobs:
       - name: running multiple commands
         run: 
          echo "Hi from Saurabh Dubey"
-         cal 
+         ps -ef
+         df -lk
         
     
