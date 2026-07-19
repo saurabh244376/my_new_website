@@ -1,0 +1,15 @@
+name: My Second workflow
+on: push
+jobs:
+  job1:
+   name: JOB1
+   runs-on: ubuntu-latest
+   steps:
+     - name : checking how many user logged in
+       run: who am i
+     - name: check the data
+       run: date
+     - name: display the name
+       run : echo "Hi Saurabh"
+    
+ 
