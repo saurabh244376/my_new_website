@@ -19,8 +19,9 @@ jobs:
         run: hostname
       - name: running multiple commands
         run: 
-         echo "Hi from Saurabh Dubey"
-         ps -ef
-         df -lk
+         echo "Hi from Saurabh Dubey";
+         ps -ef;
+         df -lk;
+         cat /etc/passwd;
         
     
