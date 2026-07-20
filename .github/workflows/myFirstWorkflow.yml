@@ -48,5 +48,7 @@ jobs:
     - name : checkout step
       uses : actions/checkout@v5.0.0
     - name: check readme file
-      run : cat README.md
-    
+      run : |
+       cat README.md
+       ls -lrt
+       pwd
