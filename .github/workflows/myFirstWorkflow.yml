@@ -64,6 +64,6 @@ jobs:
     - name : step1
       run : |
        echo "The Environment Type is $ENV_TYPE"
-       #echo " The User is "$APP_USER"
-       #echo " The Post is $APP_PORT"
+       echo " The User is "$APP_USER"
+       echo " The Post is $APP_PORT"
    
