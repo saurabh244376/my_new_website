@@ -5,6 +5,10 @@ on:
  schedule:
   - cron: "*/5 * * * *"
  workflow_dispatch:
+env: 
+ ENV_TYPE: DEV
+ APP_USER: dubeys8
+ APP_PORT : 8080
 jobs:
   job1:
    name: JOB1
@@ -52,3 +56,14 @@ jobs:
        cat README.md
        ls -lrt
        pwd
+  job6:  
+   needs : job1
+   name: Display the env variables
+   runs-on: ubuntu_latest
+   steps:
+    - name : step1
+      run : |
+       echo "The Environment Type is $ENV_TYPE"
+       echo " The User is "$APP_USER"
+       echo " The Post is $APP_PORT"
+   
