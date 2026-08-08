@@ -54,8 +54,11 @@ jobs:
     - name: check readme file
       run : |
        cat README.md
-       ls -lrt
-       pwd
+       touch saurabh.txt
+       ls -lrt >> sau.txt
+       pwd >> sau.txt
+       echo "Actor_name : ${{github.actor}}">> sau.txt
+       echo "Event_name : ${{github.event_name}}">>sau.txt
   job6:  
    needs : job1
    name: Display the env variables
