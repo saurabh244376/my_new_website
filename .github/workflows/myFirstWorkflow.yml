@@ -26,11 +26,11 @@ jobs:
       - name: checking the hostname
         run: hostname
       - name: running multiple commands
-        run: 
-         echo "Hi from Saurabh Dubey";
-         ps -ef;
-         df -lk;
-         cat /etc/passwd;
+        run: | 
+         echo "Hi from Saurabh Dubey"
+         ps -ef
+         df -lk
+         cat /etc/passwd
   job3:
     needs: job2
     name: JOB03
@@ -66,7 +66,7 @@ jobs:
        echo "The Environment Type is $ENV_TYPE"
        echo " The User is $APP_USER"
        echo " The Post is $APP_PORT"
-    - name : referring env secret
+    - name : "referring env secret"
       run: |
        echo "[INFO] Application Password is ${{secrets.APP_PASSWORD}}
        echo "Hi Saurabh Bhai"
