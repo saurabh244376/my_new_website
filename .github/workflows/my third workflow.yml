@@ -1,8 +1,7 @@
 name: my-third-workflow
 on :
  pull_request:
-   branches: 
-   - main    
+   branches:  ['main','master']    
 jobs:
   unit-tests:
    name : Running Unit Tests
