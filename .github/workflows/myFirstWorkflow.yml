@@ -67,7 +67,7 @@ jobs:
   job6:  
    needs : job1
    name: Display the env variables
-   runs-on: ubuntu-22.04
+   runs-on: ubuntu-latest
    steps:
     - name : step1
       run : |
@@ -82,10 +82,10 @@ jobs:
        echo " This is running on :: ${{runner.os}}"
   job7:
    name : Stage_dep 
-   runs-on: ubuntu-22.04
+   runs-on: ubuntu-latest
    steps:
    - name : referring Environment variable
-     run : echo "[INFO} Running deployment on ${{vars.USER}}"
+     run : echo "[INFO} Running deployment on ${{ vars.USER }}"
  
    
    
