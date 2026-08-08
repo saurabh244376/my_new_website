@@ -85,7 +85,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
    - name : referring Environment variable
-     run : echo "[INFO} Running deployment on ${{ vars.USER }}"
+     run : echo "[INFO] Running deployment on ${{ vars.USER }}"
  
    
    
