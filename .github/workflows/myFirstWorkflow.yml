@@ -81,7 +81,8 @@ jobs:
        echo " ${{github.actor}}"
        echo " This is running on :: ${{runner.os}}"
   job7:
-   name : Stage_dep 
+   name : Stage_dep
+   environment: STAGING
    runs-on: ubuntu-latest
    steps:
    - name : referring Environment variable
