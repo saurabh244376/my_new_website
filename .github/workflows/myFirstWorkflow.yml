@@ -66,4 +66,9 @@ jobs:
        echo "The Environment Type is $ENV_TYPE"
        echo " The User is $APP_USER"
        echo " The Post is $APP_PORT"
+    - name : referring env secret
+      run: |
+       echo "[INFO] Application Password is ${{secrets.APP_PASSWORD}}
+       echo "Hi Saurabh Bhai"
+   
    
