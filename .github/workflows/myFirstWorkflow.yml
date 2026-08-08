@@ -50,15 +50,20 @@ jobs:
    runs-on: ubuntu-latest
    steps:
     - name : checkout step
-      uses : actions/checkout@v5.0.0
+      uses : actions/checkout@v4.0.0
     - name: check readme file
       run : |
        cat README.md
        touch saurabh.txt
-       ls -lrt >> sau.txt
-       pwd >> sau.txt
-       echo "Actor_name : ${{github.actor}}">> sau.txt
-       echo "Event_name : ${{github.event_name}}">>sau.txt
+       ls -lrt >> saurabh.txt
+       pwd >> saurabh.txt
+       echo "Actor_name : ${{github.actor}}">> saurabh.txt
+       echo "Event_name : ${{github.event_name}}">>saurabh.txt
+    - name: Upload Generated File as Artifact
+      uses: actions/upload-artifact@v4.0.0
+      with:
+       name: saurabh-log-file
+       path: saurabh.txt
   job6:  
    needs : job1
    name: Display the env variables
